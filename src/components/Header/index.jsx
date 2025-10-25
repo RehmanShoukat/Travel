@@ -28,11 +28,11 @@ const Header = () => {
           <div className="bg-rose-500 flex items-center justify-center h-12 w-12 rounded-full text-2xl text-white">
             <TbAirBalloon />
           </div>
-          <h1 className="text-white font-bold text-xl tracking-wide">TRIPI</h1>
+          <h1 className="text-white font-bold text-2xl tracking-wide">TRIPI</h1>
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8 text-white font-semibold">
+        <ul className="hidden md:flex items-center gap-8 text-white font-semibold text-lg">
           {["Home", "About", "Destination", "Blog", "Dashboard", "Contact"].map(
             (item) => (
               <li
