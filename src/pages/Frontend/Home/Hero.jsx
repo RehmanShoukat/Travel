@@ -21,8 +21,8 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-black/50"></div>
 
-      <div className="relative z-[2] flex flex-col items-center text-center px-4 gap-4 -mt-12">
-        <h1 className="text-4xl md:text-5xl text-white font-bold tracking-widest">
+      <div className="relative z-[2] flex flex-col items-center text-center px-4 gap-4 -mt-12 " >
+        <h1 className="text-4xl md:text-5xl text-white font-bold tracking-widest" >
           LET'S ENJOY THE NATURE
         </h1>
         <p className="text-lg md:text-xl text-white">

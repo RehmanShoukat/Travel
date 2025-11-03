@@ -1,4 +1,6 @@
 import React from 'react'
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import hotel1 from "../../../assets/images/h1.jpg"
 import hotel2 from "../../../assets/images/h2.jpg"
@@ -41,6 +43,12 @@ const HotelList = () => {
             image: hotel4,
         },
     ];
+
+    AOS.init({
+        duration: 1500, // 1.5 seconds
+        easing: "ease-in-out", // smoother curve
+        once: true, // sirf ek baar animation chalay
+    });
     return (
         <section className='py-12 px-6 sm:px-6 lg:px-12 max-w-6xl mx-auto'>
             <div className='flex flex-col'>
@@ -49,11 +57,11 @@ const HotelList = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
                 {hotels.map((items, index) => (
-                    <div key={index} className="relative overflow-hidden rounded-2xl group">
+                    <div key={index} className="relative overflow-hidden rounded-2xl group" data-aos="fade-right" data-aos-delay={index * 300}>
                         <img
                             src={items.image}
                             alt={items.name}
-                            className="w-full h-70 object-cover object-fit rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2"
+                            className="w-full h-85 object-cover object-fit rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2"
                         />
 
                         <button className="absolute top-3 right-3 bg-white/50 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-all duration-300">
@@ -75,7 +83,7 @@ const HotelList = () => {
                                 <span className="text-black/80 text-sm font-bold ">{items.reviews}</span>
                             </div>
                             <p className='text-gray-600 text-lg md:text-xl font-bold mt-2 ml-2'>Starting from <span className='text-blue-800 text-lg md:text-xl font-bold'>US${items.price}</span> </p>
-                            
+
                         </div>
                     </div>
                 ))}
