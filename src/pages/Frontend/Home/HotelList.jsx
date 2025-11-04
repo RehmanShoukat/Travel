@@ -58,11 +58,14 @@ const HotelList = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-8">
                 {hotels.map((items, index) => (
                     <div key={index} className="relative overflow-hidden rounded-2xl group" data-aos="fade-right" data-aos-delay={index * 300}>
-                        <img
-                            src={items.image}
-                            alt={items.name}
-                            className="w-full h-85 object-cover object-fit rounded-2xl transition-transform duration-500 ease-in-out hover:-translate-y-2"
-                        />
+                        <div className='overflow-hidden rounded-2xl'>
+
+                            <img
+                                src={items.image}
+                                alt={items.name}
+                                className="w-85 h-85 object-cover  rounded-2xl transition-transform duration-500 transform hover:scale-110"
+                            />
+                        </div>
 
                         <button className="absolute top-3 right-3 bg-white/50 backdrop-blur-sm rounded-full p-2 hover:bg-white transition-all duration-300">
                             <Heart className="w-5 h-5 text-gray-800" />

@@ -3,6 +3,8 @@ import Hero from './Hero'
 import Destination from './Destination'
 import HotelList from './HotelList'
 import WhyChoose from './WhyChoose'
+import TopPlaces from './TopPlaces'
+import Subscibe from './Subscibe'
 
 const index = () => {
   return (
@@ -11,6 +13,9 @@ const index = () => {
       <Destination/>
       <HotelList/>
       <WhyChoose/>
+      <TopPlaces/>
+      <Subscibe/>
+      
     </>
 
   )
